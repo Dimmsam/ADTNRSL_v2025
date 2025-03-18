@@ -198,16 +198,16 @@ void DelVLast (List * L, infotype * X)
         P = Next(P);
     }
 
-    *X = Info(P);   // Store the value of the last node
-    PDel = P;       // Store the address of the deleted node
+    *X = Info(P);
+    PDel = P;
 
-    if (Prec == Nil) {  // If only one element in the list
+    if (Prec == Nil) {
         First(*L) = Nil;
     } else {
         Next(Prec) = Nil;
     }
 
-	DeAlokasi(PDel);  // Free memory of the deleted node
+	DeAlokasi(PDel);
 	 //Buatkan algoritma sesuai spesifikasi modul ini
 }
 
